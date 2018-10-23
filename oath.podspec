@@ -14,7 +14,7 @@
           #7.
           			
           #8.
-          s.source              = { :git => "URL", :tag => "1.0.0" }
+          s.source              = { :git => "https://github.com/Carrene/oath.swift.git", :tag => "1.0.0" }
           #9.
           s.source_files     = "oath", "oath/**/*.{h,m,swift}"
     end
