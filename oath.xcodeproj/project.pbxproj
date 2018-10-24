@@ -10,6 +10,9 @@
 		AF414D23217F0E7B00921AE3 /* oath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF414D19217F0E7B00921AE3 /* oath.framework */; };
 		AF414D2A217F0E7B00921AE3 /* oath.h in Headers */ = {isa = PBXBuildFile; fileRef = AF414D1C217F0E7B00921AE3 /* oath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF414D34217F0E9600921AE3 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF414D33217F0E9600921AE3 /* Sample.swift */; };
+		AF557815218080A4008E7ABB /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557814218080A4008E7ABB /* Otp.swift */; };
+		AF557817218080D9008E7ABB /* OathDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557816218080D9008E7ABB /* OathDelegate.swift */; };
+		AF557819218080FB008E7ABB /* HashType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557818218080FB008E7ABB /* HashType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		AF414D22217F0E7B00921AE3 /* oathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF414D29217F0E7B00921AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF414D33217F0E9600921AE3 /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		AF557814218080A4008E7ABB /* Otp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Otp.swift; sourceTree = "<group>"; };
+		AF557816218080D9008E7ABB /* OathDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OathDelegate.swift; sourceTree = "<group>"; };
+		AF557818218080FB008E7ABB /* HashType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 				AF414D1C217F0E7B00921AE3 /* oath.h */,
 				AF414D1D217F0E7B00921AE3 /* Info.plist */,
 				AF414D33217F0E9600921AE3 /* Sample.swift */,
+				AF557814218080A4008E7ABB /* Otp.swift */,
+				AF557816218080D9008E7ABB /* OathDelegate.swift */,
+				AF557818218080FB008E7ABB /* HashType.swift */,
 			);
 			path = oath;
 			sourceTree = "<group>";
@@ -199,7 +208,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF557817218080D9008E7ABB /* OathDelegate.swift in Sources */,
 				AF414D34217F0E9600921AE3 /* Sample.swift in Sources */,
+				AF557815218080A4008E7ABB /* Otp.swift in Sources */,
+				AF557819218080FB008E7ABB /* HashType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
