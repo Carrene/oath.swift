@@ -14,6 +14,9 @@
 		AF557815218080A4008E7ABB /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557814218080A4008E7ABB /* Otp.swift */; };
 		AF557817218080D9008E7ABB /* OathDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557816218080D9008E7ABB /* OathDelegate.swift */; };
 		AF557819218080FB008E7ABB /* HashType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557818218080FB008E7ABB /* HashType.swift */; };
+		AF55781B2180BE0A008E7ABB /* HotpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55781A2180BE0A008E7ABB /* HotpDelegate.swift */; };
+		AF55781D2180BE97008E7ABB /* Hotp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55781C2180BE97008E7ABB /* Hotp.swift */; };
+		AFD7D6A92180C8D900410F04 /* HotpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7D6A82180C8D900410F04 /* HotpTest.swift */; };
 		C6BCCD6B1AD82B445B4A0AC3 /* Pods_oathTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888A75D81F8D86D4C89C020 /* Pods_oathTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,10 @@
 		AF557814218080A4008E7ABB /* Otp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Otp.swift; sourceTree = "<group>"; };
 		AF557816218080D9008E7ABB /* OathDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OathDelegate.swift; sourceTree = "<group>"; };
 		AF557818218080FB008E7ABB /* HashType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashType.swift; sourceTree = "<group>"; };
+		AF55781A2180BE0A008E7ABB /* HotpDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotpDelegate.swift; sourceTree = "<group>"; };
+		AF55781C2180BE97008E7ABB /* Hotp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotp.swift; sourceTree = "<group>"; };
+		AFD7D6A72180C8D900410F04 /* oathTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "oathTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		AFD7D6A82180C8D900410F04 /* HotpTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotpTest.swift; sourceTree = "<group>"; };
 		D81C283CD809F11EAA01DECD /* Pods-oath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oath/Pods-oath.debug.xcconfig"; sourceTree = "<group>"; };
 		F3E7D07BA3937BCB6A81AD0B /* Pods_oath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +111,8 @@
 				AF557814218080A4008E7ABB /* Otp.swift */,
 				AF557816218080D9008E7ABB /* OathDelegate.swift */,
 				AF557818218080FB008E7ABB /* HashType.swift */,
+				AF55781A2180BE0A008E7ABB /* HotpDelegate.swift */,
+				AF55781C2180BE97008E7ABB /* Hotp.swift */,
 			);
 			path = oath;
 			sourceTree = "<group>";
@@ -112,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				AF414D29217F0E7B00921AE3 /* Info.plist */,
+				AFD7D6A82180C8D900410F04 /* HotpTest.swift */,
+				AFD7D6A72180C8D900410F04 /* oathTests-Bridging-Header.h */,
 			);
 			path = oathTests;
 			sourceTree = "<group>";
@@ -199,6 +210,7 @@
 					AF414D21217F0E7B00921AE3 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = E8R89PF79F;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -300,6 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF55781D2180BE97008E7ABB /* Hotp.swift in Sources */,
+				AF55781B2180BE0A008E7ABB /* HotpDelegate.swift in Sources */,
 				AF557817218080D9008E7ABB /* OathDelegate.swift in Sources */,
 				AF414D34217F0E9600921AE3 /* Sample.swift in Sources */,
 				AF557815218080A4008E7ABB /* Otp.swift in Sources */,
@@ -311,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD7D6A92180C8D900410F04 /* HotpTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,11 +493,14 @@
 			baseConfigurationReference = 7C2D95B91E02E4FE3B2EA7F8 /* Pods-oathTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = oathTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nuesoft.oathTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "oathTests/oathTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -492,11 +510,13 @@
 			baseConfigurationReference = 69CCEE01BE98B8066030DEC4 /* Pods-oathTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = oathTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nuesoft.oathTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "oathTests/oathTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
