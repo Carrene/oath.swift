@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91A79F4000DA7452A5E2264B /* Pods_oath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E7D07BA3937BCB6A81AD0B /* Pods_oath.framework */; };
 		AF414D23217F0E7B00921AE3 /* oath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF414D19217F0E7B00921AE3 /* oath.framework */; };
 		AF414D2A217F0E7B00921AE3 /* oath.h in Headers */ = {isa = PBXBuildFile; fileRef = AF414D1C217F0E7B00921AE3 /* oath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF414D34217F0E9600921AE3 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF414D33217F0E9600921AE3 /* Sample.swift */; };
 		AF557815218080A4008E7ABB /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557814218080A4008E7ABB /* Otp.swift */; };
 		AF557817218080D9008E7ABB /* OathDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557816218080D9008E7ABB /* OathDelegate.swift */; };
 		AF557819218080FB008E7ABB /* HashType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557818218080FB008E7ABB /* HashType.swift */; };
+		C6BCCD6B1AD82B445B4A0AC3 /* Pods_oathTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888A75D81F8D86D4C89C020 /* Pods_oathTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D5E94F0E9A1631B30BAF51 /* Pods-oath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oath.release.xcconfig"; path = "Pods/Target Support Files/Pods-oath/Pods-oath.release.xcconfig"; sourceTree = "<group>"; };
+		69CCEE01BE98B8066030DEC4 /* Pods-oathTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oathTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-oathTests/Pods-oathTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C2D95B91E02E4FE3B2EA7F8 /* Pods-oathTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oathTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oathTests/Pods-oathTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9888A75D81F8D86D4C89C020 /* Pods_oathTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oathTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF414D19217F0E7B00921AE3 /* oath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = oath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF414D1C217F0E7B00921AE3 /* oath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = oath.h; sourceTree = "<group>"; };
 		AF414D1D217F0E7B00921AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +41,8 @@
 		AF557814218080A4008E7ABB /* Otp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Otp.swift; sourceTree = "<group>"; };
 		AF557816218080D9008E7ABB /* OathDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OathDelegate.swift; sourceTree = "<group>"; };
 		AF557818218080FB008E7ABB /* HashType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashType.swift; sourceTree = "<group>"; };
+		D81C283CD809F11EAA01DECD /* Pods-oath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oath/Pods-oath.debug.xcconfig"; sourceTree = "<group>"; };
+		F3E7D07BA3937BCB6A81AD0B /* Pods_oath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A79F4000DA7452A5E2264B /* Pods_oath.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF414D23217F0E7B00921AE3 /* oath.framework in Frameworks */,
+				C6BCCD6B1AD82B445B4A0AC3 /* Pods_oathTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		571B4B60A153DB95EC7DB7BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3E7D07BA3937BCB6A81AD0B /* Pods_oath.framework */,
+				9888A75D81F8D86D4C89C020 /* Pods_oathTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF414D0F217F0E7B00921AE3 = {
 			isa = PBXGroup;
 			children = (
 				AF414D1B217F0E7B00921AE3 /* oath */,
 				AF414D26217F0E7B00921AE3 /* oathTests */,
 				AF414D1A217F0E7B00921AE3 /* Products */,
+				FC72031E206F9A9ADB11D2F0 /* Pods */,
+				571B4B60A153DB95EC7DB7BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +116,17 @@
 			path = oathTests;
 			sourceTree = "<group>";
 		};
+		FC72031E206F9A9ADB11D2F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D81C283CD809F11EAA01DECD /* Pods-oath.debug.xcconfig */,
+				00D5E94F0E9A1631B30BAF51 /* Pods-oath.release.xcconfig */,
+				7C2D95B91E02E4FE3B2EA7F8 /* Pods-oathTests.debug.xcconfig */,
+				69CCEE01BE98B8066030DEC4 /* Pods-oathTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -113,6 +145,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF414D2D217F0E7B00921AE3 /* Build configuration list for PBXNativeTarget "oath" */;
 			buildPhases = (
+				D2F1325EC7D03D82B26903C2 /* [CP] Check Pods Manifest.lock */,
 				AF414D14217F0E7B00921AE3 /* Sources */,
 				AF414D15217F0E7B00921AE3 /* Frameworks */,
 				AF414D16217F0E7B00921AE3 /* Headers */,
@@ -131,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF414D30217F0E7B00921AE3 /* Build configuration list for PBXNativeTarget "oathTests" */;
 			buildPhases = (
+				171039C8A57BDFD240A3E197 /* [CP] Check Pods Manifest.lock */,
 				AF414D1E217F0E7B00921AE3 /* Sources */,
 				AF414D1F217F0E7B00921AE3 /* Frameworks */,
 				AF414D20217F0E7B00921AE3 /* Resources */,
+				9A17DCE3D2CCEFADEC25C0F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +237,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		171039C8A57BDFD240A3E197 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oathTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A17DCE3D2CCEFADEC25C0F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-oathTests/Pods-oathTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-oathTests/Pods-oathTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2F1325EC7D03D82B26903C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oath-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF414D14217F0E7B00921AE3 /* Sources */ = {
@@ -336,6 +428,7 @@
 		};
 		AF414D2E217F0E7B00921AE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D81C283CD809F11EAA01DECD /* Pods-oath.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -359,6 +452,7 @@
 		};
 		AF414D2F217F0E7B00921AE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D5E94F0E9A1631B30BAF51 /* Pods-oath.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -381,6 +475,7 @@
 		};
 		AF414D31217F0E7B00921AE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C2D95B91E02E4FE3B2EA7F8 /* Pods-oathTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = E8R89PF79F;
@@ -394,6 +489,7 @@
 		};
 		AF414D32217F0E7B00921AE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69CCEE01BE98B8066030DEC4 /* Pods-oathTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = E8R89PF79F;
