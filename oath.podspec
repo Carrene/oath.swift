@@ -2,7 +2,7 @@
           #1.
           s.name               = "oath"
           #2.
-          s.version            = "0.1.0"
+          s.version            = "0.2.0"
           #3.  
           s.summary         = "Sort description of 'oath' framework"
           #4.
@@ -14,7 +14,7 @@
           #7.
           			
           #8.
-          s.source              = { :git => "https://github.com/Carrene/oath.swift.git", :tag => "0.1.0" }
+          s.source              = { :git => "https://github.com/Carrene/oath.swift.git", :tag => "0.2.0" }
           #9.
           s.source_files     = "oath", "oath/**/*.{h,m,swift}"
     end
