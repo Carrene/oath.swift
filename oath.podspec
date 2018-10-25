@@ -17,4 +17,8 @@
           s.source              = { :git => "https://github.com/Carrene/oath.swift.git", :tag => "0.2.0" }
           #9.
           s.source_files     = "oath", "oath/**/*.{h,m,swift}"
+          s.dependency 'CryptoSwift', '~> 0.6.9'
+  s.ios.deployment_target = "8.0"
+
+		
     end
