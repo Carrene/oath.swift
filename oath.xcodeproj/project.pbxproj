@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		91A79F4000DA7452A5E2264B /* Pods_oath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E7D07BA3937BCB6A81AD0B /* Pods_oath.framework */; };
+		AF2B9D9A2181A1C0001A859E /* TotpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B9D992181A1C0001A859E /* TotpDelegate.swift */; };
+		AF2B9D9C2181A490001A859E /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B9D9B2181A490001A859E /* extension.swift */; };
+		AF2B9D9E2181AB8B001A859E /* Totp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B9D9D2181AB8B001A859E /* Totp.swift */; };
+		AF2B9DA02181AFA4001A859E /* TotpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B9D9F2181AFA4001A859E /* TotpTest.swift */; };
 		AF414D23217F0E7B00921AE3 /* oath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF414D19217F0E7B00921AE3 /* oath.framework */; };
 		AF414D2A217F0E7B00921AE3 /* oath.h in Headers */ = {isa = PBXBuildFile; fileRef = AF414D1C217F0E7B00921AE3 /* oath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF414D34217F0E9600921AE3 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF414D33217F0E9600921AE3 /* Sample.swift */; };
 		AF557815218080A4008E7ABB /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557814218080A4008E7ABB /* Otp.swift */; };
 		AF557817218080D9008E7ABB /* OathDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557816218080D9008E7ABB /* OathDelegate.swift */; };
 		AF557819218080FB008E7ABB /* HashType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF557818218080FB008E7ABB /* HashType.swift */; };
@@ -35,18 +38,20 @@
 		69CCEE01BE98B8066030DEC4 /* Pods-oathTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oathTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-oathTests/Pods-oathTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C2D95B91E02E4FE3B2EA7F8 /* Pods-oathTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oathTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oathTests/Pods-oathTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9888A75D81F8D86D4C89C020 /* Pods_oathTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oathTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF2B9D992181A1C0001A859E /* TotpDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotpDelegate.swift; sourceTree = "<group>"; };
+		AF2B9D9B2181A490001A859E /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		AF2B9D9D2181AB8B001A859E /* Totp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Totp.swift; sourceTree = "<group>"; };
+		AF2B9D9F2181AFA4001A859E /* TotpTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotpTest.swift; sourceTree = "<group>"; };
 		AF414D19217F0E7B00921AE3 /* oath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = oath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF414D1C217F0E7B00921AE3 /* oath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = oath.h; sourceTree = "<group>"; };
 		AF414D1D217F0E7B00921AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF414D22217F0E7B00921AE3 /* oathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF414D29217F0E7B00921AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF414D33217F0E9600921AE3 /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		AF557814218080A4008E7ABB /* Otp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Otp.swift; sourceTree = "<group>"; };
 		AF557816218080D9008E7ABB /* OathDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OathDelegate.swift; sourceTree = "<group>"; };
 		AF557818218080FB008E7ABB /* HashType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashType.swift; sourceTree = "<group>"; };
 		AF55781A2180BE0A008E7ABB /* HotpDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotpDelegate.swift; sourceTree = "<group>"; };
 		AF55781C2180BE97008E7ABB /* Hotp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotp.swift; sourceTree = "<group>"; };
-		AFD7D6A72180C8D900410F04 /* oathTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "oathTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		AFD7D6A82180C8D900410F04 /* HotpTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotpTest.swift; sourceTree = "<group>"; };
 		D81C283CD809F11EAA01DECD /* Pods-oath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oath/Pods-oath.debug.xcconfig"; sourceTree = "<group>"; };
 		F3E7D07BA3937BCB6A81AD0B /* Pods_oath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,12 +112,14 @@
 			children = (
 				AF414D1C217F0E7B00921AE3 /* oath.h */,
 				AF414D1D217F0E7B00921AE3 /* Info.plist */,
-				AF414D33217F0E9600921AE3 /* Sample.swift */,
 				AF557814218080A4008E7ABB /* Otp.swift */,
 				AF557816218080D9008E7ABB /* OathDelegate.swift */,
 				AF557818218080FB008E7ABB /* HashType.swift */,
 				AF55781A2180BE0A008E7ABB /* HotpDelegate.swift */,
 				AF55781C2180BE97008E7ABB /* Hotp.swift */,
+				AF2B9D992181A1C0001A859E /* TotpDelegate.swift */,
+				AF2B9D9B2181A490001A859E /* extension.swift */,
+				AF2B9D9D2181AB8B001A859E /* Totp.swift */,
 			);
 			path = oath;
 			sourceTree = "<group>";
@@ -122,7 +129,7 @@
 			children = (
 				AF414D29217F0E7B00921AE3 /* Info.plist */,
 				AFD7D6A82180C8D900410F04 /* HotpTest.swift */,
-				AFD7D6A72180C8D900410F04 /* oathTests-Bridging-Header.h */,
+				AF2B9D9F2181AFA4001A859E /* TotpTest.swift */,
 			);
 			path = oathTests;
 			sourceTree = "<group>";
@@ -313,9 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF55781D2180BE97008E7ABB /* Hotp.swift in Sources */,
+				AF2B9D9C2181A490001A859E /* extension.swift in Sources */,
 				AF55781B2180BE0A008E7ABB /* HotpDelegate.swift in Sources */,
 				AF557817218080D9008E7ABB /* OathDelegate.swift in Sources */,
-				AF414D34217F0E9600921AE3 /* Sample.swift in Sources */,
+				AF2B9D9E2181AB8B001A859E /* Totp.swift in Sources */,
+				AF2B9D9A2181A1C0001A859E /* TotpDelegate.swift in Sources */,
 				AF557815218080A4008E7ABB /* Otp.swift in Sources */,
 				AF557819218080FB008E7ABB /* HashType.swift in Sources */,
 			);
@@ -325,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2B9DA02181AFA4001A859E /* TotpTest.swift in Sources */,
 				AFD7D6A92180C8D900410F04 /* HotpTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +509,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nuesoft.oathTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "oathTests/oathTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -516,7 +526,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nuesoft.oathTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "oathTests/oathTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

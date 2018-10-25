@@ -47,7 +47,6 @@ public class Otp {
         return result
     }
     
-    //TODO handle nil value exception
     func calculteHMAC(hashType:HMAC.Variant , secret:Array<UInt8>, data:Array<UInt8>) throws -> Array<UInt8>?{
         
         let hmac = try HMAC(key: secret, variant: hashType).authenticate(data)

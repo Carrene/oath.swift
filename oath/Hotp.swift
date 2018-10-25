@@ -6,7 +6,7 @@
 //  Copyright © 1397 hamed akhlaghi. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public class Hotp: Otp, HotpDelegate {
     
@@ -21,11 +21,10 @@ public class Hotp: Otp, HotpDelegate {
         mHashType = hashType
     }
     
-    public func generateHotp() -> String {
+    public func generateHotp() -> String? {
         let movingFactor = mCounter
         mCounter = mCounter + 1
-        return super.generateOtp(moveFactor: movingFactor, mHashType: mHashType, secret: mSecret, otpLength: mOtpLength)!
-        
+        return super.generateOtp(moveFactor: movingFactor, mHashType: mHashType, secret: mSecret, otpLength: mOtpLength)
     }
     
     

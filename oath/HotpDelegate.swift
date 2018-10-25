@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol HotpDelegate {
-    func generateHotp() -> String
+    func generateHotp() -> String?
 }

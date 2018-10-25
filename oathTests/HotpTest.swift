@@ -24,9 +24,8 @@ class HotpTest: XCTestCase {
     
     func testHotp_10time() {
         let hexSecret = "3132333435363738393031323334353637383930"
-//        let secret: [UInt8] = Array(hexSecret.utf8)
-        let secret = stringToBytes(hexSecret)
-        let hotp =  Hotp(secret: secret!, otpLength: 6, hashType: HashType.SHA1)
+        let secret: [UInt8] = hexSecret.hexaToBytes()
+        let hotp =  Hotp(secret: secret, otpLength: 6, hashType: HashType.SHA1)
         XCTAssertEqual(hotp.generateHotp(), "755224")
         XCTAssertEqual(hotp.generateHotp(), "287082")
         XCTAssertEqual(hotp.generateHotp(), "359152")
@@ -45,25 +44,5 @@ class HotpTest: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
-    func stringToBytes(_ string: String) -> [UInt8]? {
-        let length = string.characters.count
-        if length & 1 != 0 {
-            return nil
-        }
-        var bytes = [UInt8]()
-        bytes.reserveCapacity(length/2)
-        var index = string.startIndex
-        for _ in 0..<length/2 {
-            let nextIndex = string.index(index, offsetBy: 2)
-            if let b = UInt8(string[index..<nextIndex], radix: 16) {
-                bytes.append(b)
-            } else {
-                return nil
-            }
-            index = nextIndex
-        }
-        return bytes
-    }
-    
 }
+
