@@ -18,7 +18,7 @@ public class Totp: Otp, TotpDelegate {
     private var mHashType: HashType
 
     
-    init(secret: [UInt8], timeInterval: Int, otpLength: Int, hashType: HashType) {
+    public init(secret: [UInt8], timeInterval: Int, otpLength: Int, hashType: HashType) {
         
         mSecret = secret
         mTimeInterval = timeInterval

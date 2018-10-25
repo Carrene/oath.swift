@@ -15,7 +15,7 @@ public class Hotp: Otp, HotpDelegate {
     private var mOtpLength: Int
     private var mCounter: CLong = 0
     
-    init(secret: [UInt8], otpLength: Int, hashType: HashType) {
+    public init(secret: [UInt8], otpLength: Int, hashType: HashType) {
         mSecret = secret
         mOtpLength = otpLength
         mHashType = hashType
