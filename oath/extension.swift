@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    func hexaToBytes() -> [UInt8] {
+    public func hexaToBytes() -> [UInt8] {
         var position = self.startIndex
         return (0..<self.characters.count/2).flatMap { _ in
             defer { position = self.index(position, offsetBy: 2) }
