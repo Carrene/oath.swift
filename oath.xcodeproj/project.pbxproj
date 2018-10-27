@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		91A79F4000DA7452A5E2264B /* Pods_oath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E7D07BA3937BCB6A81AD0B /* Pods_oath.framework */; };
+		AF158E942184707C009511EF /* ChallengeResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF158E932184707C009511EF /* ChallengeResponseDelegate.swift */; };
+		AF158E9621847204009511EF /* ChallengeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF158E9521847204009511EF /* ChallengeResponse.swift */; };
 		AF2B9D9A2181A1C0001A859E /* TotpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B9D992181A1C0001A859E /* TotpDelegate.swift */; };
 		AF2B9D9C2181A490001A859E /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B9D9B2181A490001A859E /* extension.swift */; };
 		AF2B9D9E2181AB8B001A859E /* Totp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B9D9D2181AB8B001A859E /* Totp.swift */; };
@@ -38,6 +40,8 @@
 		69CCEE01BE98B8066030DEC4 /* Pods-oathTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oathTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-oathTests/Pods-oathTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C2D95B91E02E4FE3B2EA7F8 /* Pods-oathTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oathTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oathTests/Pods-oathTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9888A75D81F8D86D4C89C020 /* Pods_oathTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oathTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF158E932184707C009511EF /* ChallengeResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeResponseDelegate.swift; sourceTree = "<group>"; };
+		AF158E9521847204009511EF /* ChallengeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeResponse.swift; sourceTree = "<group>"; };
 		AF2B9D992181A1C0001A859E /* TotpDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotpDelegate.swift; sourceTree = "<group>"; };
 		AF2B9D9B2181A490001A859E /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		AF2B9D9D2181AB8B001A859E /* Totp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Totp.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				AF2B9D992181A1C0001A859E /* TotpDelegate.swift */,
 				AF2B9D9B2181A490001A859E /* extension.swift */,
 				AF2B9D9D2181AB8B001A859E /* Totp.swift */,
+				AF158E932184707C009511EF /* ChallengeResponseDelegate.swift */,
+				AF158E9521847204009511EF /* ChallengeResponse.swift */,
 			);
 			path = oath;
 			sourceTree = "<group>";
@@ -319,6 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF158E9621847204009511EF /* ChallengeResponse.swift in Sources */,
+				AF158E942184707C009511EF /* ChallengeResponseDelegate.swift in Sources */,
 				AF55781D2180BE97008E7ABB /* Hotp.swift in Sources */,
 				AF2B9D9C2181A490001A859E /* extension.swift in Sources */,
 				AF55781B2180BE0A008E7ABB /* HotpDelegate.swift in Sources */,
