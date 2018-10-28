@@ -12,7 +12,7 @@ import Foundation
         
         private let DIGITS_POWER = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000]
         private var mSeed: String?
-        private var mTimeinterval: Int?
+        private var mTimeInterval: Int?
         private var mHashType: HashType?
         private var mResponseLength: Int?
         //TODO is this field necessary
@@ -28,7 +28,7 @@ import Foundation
             var codeDigits = 0
             var crypto: HMAC.Variant?
             var result: String?
-            var ocraSuiteLength = ocraSuite.hexaToBytes().count
+            let ocraSuiteLength = ocraSuite.hexaToBytes().count
             var counterLength = 0
             var questionLength = 0
             var passwordLength = 0
@@ -36,8 +36,8 @@ import Foundation
             var timeStampLength = 0
             
             // The OCRASuites components
-            var CryptoFunction: String = ocraSuite.components(separatedBy: ":")[1]
-            var DataInput: String = ocraSuite.components(separatedBy: ":")[2]
+            let CryptoFunction: String = ocraSuite.components(separatedBy: ":")[1]
+            let DataInput: String = ocraSuite.components(separatedBy: ":")[2]
             if CryptoFunction.lowercased().contains("sha1") {
                 crypto = HMAC.Variant.sha1
             }
@@ -214,10 +214,69 @@ import Foundation
                 result = "0"+result!
             }
         
+            
         }
         
         public func generateHashChallengeResponse(challenge: String) {
+            let ocraSuite: String = buildOcraSuit(version: "1", challengeLimit: 8)
             
+            var counter = [UInt8](repeating: 0, count: 8)
+            var movingFactor: CLong = mCounter!
+            for i in stride(from: counter.count - 1, through: 0, by: -1) {
+                counter[i] = UInt8(movingFactor & 0xff)
+                 movingFactor = movingFactor >> 8
+            }
+            // Build question buffer
+            var question = [UInt8](repeating: 0, count: 8)
+            let challengeBytes = [UInt8](challenge.utf8)
+            for i in 0...question.count-1 {
+                question[i] = challengeBytes[i]
+            }
+            
+            // Build message
+//            int messageLength = ocraSuite.length() + question.length + counter.length + 1;
+//            byte[] message = new byte[messageLength];
+//            
+//            // put bytes of Ocra Suite into message
+//            arraycopy(ocraSuite.getBytes(), 0, message, 0, ocraSuite.length());
+//            
+//            // add delimeter
+//            message[ocraSuite.length()] = (byte) (0x00);
+//            
+//            // put question to message
+//            arraycopy(question, 0, message, ocraSuite.length() + 1, question.length);
+//            
+//            // put timeStamp to message
+//            arraycopy(counter, 0, message, ocraSuite.length() + 1 + question.length, counter.length);
+//            
+//            byte[] seed = mSeed.getBytes();
+//            
+//            HashType hashType = mHashType;
+//            byte[] hash = new byte[0];
+//            try {
+//            hash = CryptoUtil.hmac(HmacType.HmacSHA1, seed, message);
+//            } catch (InvalidKeyException e) {
+//            e.printStackTrace();
+//            } catch (NoSuchAlgorithmException e) {
+//            e.printStackTrace();
+//            }
+//            
+//            int offset = hash[hash.length - 1] & 0xf;
+//            
+//            int responseBinary = ((hash[offset] & 0x7f) << 24)
+//                | ((hash[offset + 1] & 0xff) << 16)
+//                | ((hash[offset + 2] & 0xff) << 8)
+//                | (hash[offset + 3] & 0xff);
+//            
+//            
+//            int otp = responseBinary % DIGITS_POWER[mResponseLength];
+//            StringBuilder result = new StringBuilder(Integer.toString(otp));
+//            
+//            while (result.length() < mResponseLength) {
+//                result.insert(0, "0");
+//            }
+//            
+//            return result.toString();
         }
         
         public func generateHashTimeChallengeResponse(challenge: String) {
@@ -230,6 +289,36 @@ import Foundation
         
         public func verifyChallengeResponse(challenge: String, response: String, windowSize: Int) -> Bool {
             return true
+        }
+        
+        private func formatTime(timeInterval: Int) -> String {
+            var timeInterval = timeInterval
+            if (timeInterval >= 60) {
+                timeInterval = timeInterval / 60
+                
+                if (timeInterval > 60) {
+                    timeInterval = timeInterval / 60
+                    return "\(timeInterval)" + "H"
+                }
+                
+                return "\(timeInterval)" + "M"
+            }
+            
+            return "\(timeInterval)" + "S"
+        }
+        
+        private func buildOcraSuit(version: String, challengeLimit: Int) -> String {
+            
+            var algorithm = "OCRA-" + version
+            algorithm = algorithm + " : HOTP-" + (mHashType?.rawValue)!
+            algorithm = algorithm + "-" + "\(mResponseLength!)"
+            
+            if (mCounter != 0) {
+                algorithm = algorithm + " : C-QA" + "\(challengeLimit)"
+            } else if (mTimeInterval != 0) {
+                algorithm = algorithm + " : QA" + "\(challengeLimit)" + "-T" + formatTime(timeInterval: mTimeInterval!)
+            }
+            return algorithm
         }
         
     }
