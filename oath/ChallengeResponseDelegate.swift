@@ -8,8 +8,5 @@
 
 import Foundation
 public protocol ChallengeResponseDelegate {
-    func generateHashChallengeResponse(challenge: String) -> String
-    func generateHashTimeChallengeResponse(challenge: String) -> String
-    func generateHashTimeChallengeResponse(challenge: String, time: CLong) -> String
-    func verifyChallengeResponse(challenge: String, response: String, windowSize: Int) -> Bool
+    func generateOcra(ocraSuite: String, secret: [UInt8], counter: String?, challenge: String, password: String?, sessionInformation: String?, timeStamp: String?) -> String?
 }

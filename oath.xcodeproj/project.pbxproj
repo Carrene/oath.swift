@@ -22,6 +22,7 @@
 		AF55781B2180BE0A008E7ABB /* HotpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55781A2180BE0A008E7ABB /* HotpDelegate.swift */; };
 		AF55781D2180BE97008E7ABB /* Hotp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55781C2180BE97008E7ABB /* Hotp.swift */; };
 		AFD7D6A92180C8D900410F04 /* HotpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7D6A82180C8D900410F04 /* HotpTest.swift */; };
+		AFF6A7882186F90100A83AC8 /* ChallengeResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6A7872186F90100A83AC8 /* ChallengeResponseTest.swift */; };
 		C6BCCD6B1AD82B445B4A0AC3 /* Pods_oathTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888A75D81F8D86D4C89C020 /* Pods_oathTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		AF55781A2180BE0A008E7ABB /* HotpDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotpDelegate.swift; sourceTree = "<group>"; };
 		AF55781C2180BE97008E7ABB /* Hotp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotp.swift; sourceTree = "<group>"; };
 		AFD7D6A82180C8D900410F04 /* HotpTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotpTest.swift; sourceTree = "<group>"; };
+		AFF6A7872186F90100A83AC8 /* ChallengeResponseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeResponseTest.swift; sourceTree = "<group>"; };
 		D81C283CD809F11EAA01DECD /* Pods-oath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oath/Pods-oath.debug.xcconfig"; sourceTree = "<group>"; };
 		F3E7D07BA3937BCB6A81AD0B /* Pods_oath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 				AF414D29217F0E7B00921AE3 /* Info.plist */,
 				AFD7D6A82180C8D900410F04 /* HotpTest.swift */,
 				AF2B9D9F2181AFA4001A859E /* TotpTest.swift */,
+				AFF6A7872186F90100A83AC8 /* ChallengeResponseTest.swift */,
 			);
 			path = oathTests;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF2B9DA02181AFA4001A859E /* TotpTest.swift in Sources */,
+				AFF6A7882186F90100A83AC8 /* ChallengeResponseTest.swift in Sources */,
 				AFD7D6A92180C8D900410F04 /* HotpTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
