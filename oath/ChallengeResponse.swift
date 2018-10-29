@@ -217,7 +217,7 @@ import Foundation
             
         }
         
-        public func generateHashChallengeResponse(challenge: String) {
+        public func generateHashChallengeResponse(challenge: String) -> String {
             let ocraSuite: String = buildOcraSuit(version: "1", challengeLimit: 8)
             
             var counter = [UInt8](repeating: 0, count: 8)
@@ -234,57 +234,63 @@ import Foundation
             }
             
             // Build message
-//            int messageLength = ocraSuite.length() + question.length + counter.length + 1;
-//            byte[] message = new byte[messageLength];
-//            
-//            // put bytes of Ocra Suite into message
-//            arraycopy(ocraSuite.getBytes(), 0, message, 0, ocraSuite.length());
-//            
-//            // add delimeter
-//            message[ocraSuite.length()] = (byte) (0x00);
-//            
-//            // put question to message
-//            arraycopy(question, 0, message, ocraSuite.length() + 1, question.length);
-//            
-//            // put timeStamp to message
-//            arraycopy(counter, 0, message, ocraSuite.length() + 1 + question.length, counter.length);
-//            
-//            byte[] seed = mSeed.getBytes();
-//            
-//            HashType hashType = mHashType;
-//            byte[] hash = new byte[0];
-//            try {
-//            hash = CryptoUtil.hmac(HmacType.HmacSHA1, seed, message);
-//            } catch (InvalidKeyException e) {
-//            e.printStackTrace();
-//            } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//            }
-//            
-//            int offset = hash[hash.length - 1] & 0xf;
-//            
-//            int responseBinary = ((hash[offset] & 0x7f) << 24)
-//                | ((hash[offset + 1] & 0xff) << 16)
-//                | ((hash[offset + 2] & 0xff) << 8)
-//                | (hash[offset + 3] & 0xff);
-//            
-//            
-//            int otp = responseBinary % DIGITS_POWER[mResponseLength];
-//            StringBuilder result = new StringBuilder(Integer.toString(otp));
-//            
-//            while (result.length() < mResponseLength) {
-//                result.insert(0, "0");
-//            }
-//            
-//            return result.toString();
+            let messageLength = ocraSuite.characters.count + question.count + counter.count + 1
+            var message = [UInt8](repeating: 0, count: messageLength)
+
+            // put bytes of Ocra Suite into message
+            let ocraBytes = [UInt8](challenge.utf8)
+            for i in 0...ocraSuite.characters.count-1 {
+                message[i] = ocraBytes[i]
+            }
+            
+            // add delimeter
+            message[ocraSuite.characters.count] = 0x00
+
+            // put question to message
+            for i in 0...question.count-1 {
+                message[i + ocraSuite.characters.count + 1] = question[i]
+            }
+
+            // put timeStamp to message
+            for i in 0...counter.count-1 {
+                message[i + ocraSuite.characters.count + 1 + question.count] = counter[i]
+            }
+
+            let seed = [UInt8](mSeed!.utf8)
+
+            var hash = [UInt8]()
+            do {
+                hash = try HMAC(key: seed, variant: HMAC.Variant.sha1).authenticate(message)
+            }catch {
+                
+            }
+
+            let offset = hash[hash.count - 1] & 0xf
+            var responseBinary = Int((hash[Int(offset)] & 0x7f)) << 24
+            responseBinary = responseBinary | Int((hash[Int(offset+1)] & 0xff)) << 16
+            responseBinary = responseBinary | Int((hash[Int(offset+2)] & 0xff)) << 8
+            responseBinary = responseBinary | Int((hash[Int(offset+3)] & 0xff))
+            let otp = Int(responseBinary) % DIGITS_POWER [mResponseLength!]
+            var result = String(otp)
+            
+            while (result.characters.count < mResponseLength!){
+                result = "0"+result
+            }
+            
+            return result
         }
         
-        public func generateHashTimeChallengeResponse(challenge: String) {
+        public func generateHashTimeChallengeResponse(challenge: String) -> String {
             
+            let date = Date()
+            let time: CLong = CLong(date.timeIntervalSince1970)
+            mCounter = time / mTimeInterval!
+            let TOTP: String = generateHashChallengeResponse(challenge: challenge)
+            return TOTP
         }
         
-        public func generateHashTimeChallengeResponse(challenge: String, time: CLong) {
-            
+        public func generateHashTimeChallengeResponse(challenge: String, time: CLong) -> String? {
+            return nil
         }
         
         public func verifyChallengeResponse(challenge: String, response: String, windowSize: Int) -> Bool {

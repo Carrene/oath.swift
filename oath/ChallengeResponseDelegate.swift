@@ -8,8 +8,8 @@
 
 import Foundation
 public protocol ChallengeResponseDelegate {
-    func generateHashChallengeResponse(challenge: String)
-    func generateHashTimeChallengeResponse(challenge: String)
-    func generateHashTimeChallengeResponse(challenge: String, time: CLong)
+    func generateHashChallengeResponse(challenge: String) -> String
+    func generateHashTimeChallengeResponse(challenge: String) -> String
+    func generateHashTimeChallengeResponse(challenge: String, time: CLong) -> String
     func verifyChallengeResponse(challenge: String, response: String, windowSize: Int) -> Bool
 }
