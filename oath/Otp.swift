@@ -41,7 +41,7 @@ public class Otp {
         let otp = Int(otpBinary) % DIGITS_POWER [otpLength]
         var result = String(otp)
         
-        while (result.characters.count < otpLength){
+        while (result.count < otpLength){
             result = "0"+result
         }
         return result

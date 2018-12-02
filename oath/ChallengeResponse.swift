@@ -59,7 +59,7 @@ import Foundation
             // Counter
             if DataInput.lowercased().hasPrefix("c") {
                 // Fix the length of the HEX string
-                while ((counter?.characters.count)! < 16) {
+                while ((counter?.count)! < 16) {
                     counter = "0" + counter!
                 }
                 counterLength = 8
@@ -67,14 +67,14 @@ import Foundation
             
             // Question - always 128 bytes
             if DataInput.lowercased().hasPrefix("q") || DataInput.lowercased().contains("-q") {
-                while (challenge.characters.count < 256) {
+                while (challenge.count < 256) {
                     challenge = challenge + "0"
                 }
                 questionLength = 128
             }
             
             if DataInput.lowercased().contains("psha1") {
-                while (password?.characters.count)! < 40 {
+                while (password?.count)! < 40 {
                     password = "0" + password!
                 }
                 passwordLength = 20
@@ -82,7 +82,7 @@ import Foundation
             
             // Password -sha256
             if DataInput.lowercased().contains("psha256") {
-                while (password?.characters.count)! < 64 {
+                while (password?.count)! < 64 {
                     password = "0" + password!
                 }
                 passwordLength = 32
@@ -90,7 +90,7 @@ import Foundation
             
             
             if DataInput.lowercased().contains("psha512") {
-                while (password?.characters.count)! < 128 {
+                while (password?.count)! < 128 {
                     password = "0" + password!
                 }
                 passwordLength = 64
@@ -98,7 +98,7 @@ import Foundation
             
             // session information - s064
             if DataInput.lowercased().contains("s064") {
-                while (sessionInformation?.characters.count)! < 128 {
+                while (sessionInformation?.count)! < 128 {
                     sessionInformation = "0" + sessionInformation!
                 }
                 sessionInformationLength = 64
@@ -106,7 +106,7 @@ import Foundation
             
             // session information - s128
             if DataInput.lowercased().contains("s128") {
-                while (sessionInformation?.characters.count)! < 256 {
+                while (sessionInformation?.count)! < 256 {
                     sessionInformation = "0" + sessionInformation!
                 }
                 sessionInformationLength = 256
@@ -114,7 +114,7 @@ import Foundation
             
             // session information - s512
             if DataInput.lowercased().contains("s512") {
-                while (sessionInformation?.characters.count)! < 1028 {
+                while (sessionInformation?.count)! < 1028 {
                     sessionInformation = "0" + sessionInformation!
                 }
                 sessionInformationLength = 512
@@ -122,7 +122,7 @@ import Foundation
             
             // TimeStamp
             if DataInput.lowercased().contains("t") {
-                while (timeStamp?.characters.count)! < 16 {
+                while (timeStamp?.count)! < 16 {
                     timeStamp = "0" + timeStamp!
                 }
                 timeStampLength = 8
@@ -210,7 +210,7 @@ import Foundation
             let otp = Int(binary) % DIGITS_POWER [codeDigits]
             result = String(otp)
             
-            while ((result?.characters.count)! < codeDigits){
+            while ((result?.count)! < codeDigits){
                 result = "0"+result!
             }
             

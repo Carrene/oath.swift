@@ -11,7 +11,7 @@ import Foundation
 extension String {
     public func hexaToBytes() -> [UInt8] {
         var position = self.startIndex
-        return (0..<self.characters.count/2).flatMap { _ in
+        return (0..<self.count/2).compactMap { _ in
             defer { position = self.index(position, offsetBy: 2) }
             return UInt8(self[position...self.index(after: position)], radix: 16)
         }
