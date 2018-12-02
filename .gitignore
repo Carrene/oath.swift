@@ -71,5 +71,5 @@ xcuserdata
 .idea
 *.DS_Store
 Pods/
-Podfile.lock
+
 
