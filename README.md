@@ -17,5 +17,6 @@ pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.4.0'
 
 Swift 3
 ```ruby
+pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.3.0'
 
 ```
