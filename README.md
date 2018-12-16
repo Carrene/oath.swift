@@ -22,3 +22,12 @@ pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.3.0'
 
 ```
 ## Usage
+```swift
+//TOTP
+let otp = Totp(secret: secret, timeInterval: 30, otpLength: 8, hashType: HashType.SHA1)
+let totp = otp.generateTotp(time: 59)
+
+//HOTP
+let hotp = Hotp(secret: secret, otpLength: 6, hashType: HashType.SHA1)
+let hotp = hotp.generateHotp()
+```
