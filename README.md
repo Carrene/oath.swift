@@ -1,5 +1,6 @@
 # oath.swift
-OATH algorithms in swift## Features
+OATH algorithms in swift
+## Features
 - TOTP
 - HOTP
 - Challenge and response
