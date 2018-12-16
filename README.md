@@ -21,3 +21,4 @@ Swift 3
 pod 'oath', :git => 'https://github.com/Carrene/oath.swift.git', :tag => '0.3.0'
 
 ```
+## Usage
